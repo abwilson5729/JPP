@@ -6,6 +6,6 @@ public class Main {
     System.out.println(w1.toString());
 
     Widget w2 = new Widget("name2");
-    System.out.println(w2.toString());
+    System.out.println(w2.toString());//
   }
 }
