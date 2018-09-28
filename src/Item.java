@@ -1,5 +1,12 @@
 import java.util.Date;
 
+/**
+ * By Andrew Wilson, code adapted from Oracle
+ */
+
+/**
+ * Interface for items
+ */
 public interface Item {
   public static final String MANUFACTURER = "OracleProduction";
 

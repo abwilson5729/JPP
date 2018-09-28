@@ -1,3 +1,10 @@
+/**
+ * By Andrew Wilson, code adapted from Oracle
+ */
+
+/**
+ * enum for various item types
+ */
 public enum ItemType {
 
   AUDIO("AU"),
@@ -10,6 +17,11 @@ public enum ItemType {
   ItemType(String code) {
     this.code = code;
   }
+
+  /**
+   * gets the code of the item
+   * @return code
+   */
   public String getCode() {
     return code;
   }
