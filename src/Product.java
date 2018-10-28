@@ -8,7 +8,7 @@ import java.util.Date;
  * abstract class product, implements item, contains all info about the products
  * who manufactured it, its serial number, when it was manufactured and the name of the item
  */
-public abstract class Product implements Item {
+public abstract class Product implements Item, Comparable<Product> {
 
   int serialNumber;
   String manufacturer;
@@ -25,6 +25,7 @@ public abstract class Product implements Item {
     this.name = name;
     serialNumber = currentProductNumber++;
     manufacturedOn = new Date();
+    manufacturer = Item.MANUFACTURER;
   }
 
   /**
@@ -72,9 +73,12 @@ public abstract class Product implements Item {
    * @return MANUFACTURER, serialNumber, manufacturedOn, and name
    */
   public String toString(){
-    return "manufacturer  : " + MANUFACTURER + "\n"
+    return "Manufacturer : " + MANUFACTURER + "\n"
         +  "Serial Number : " + serialNumber + "\n"
-        +  "Date          : " + manufacturedOn + "\n"
-        +  "Name          : " + name + "\n";
+        +  "Date : " + manufacturedOn + "\n"
+        +  "Name : " + name;
+  }
+  public int compareTo (Product product){
+    return name.compareTo(product.getName());
   }
 }
