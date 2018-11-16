@@ -14,7 +14,12 @@ import java.util.List;
 public class Main {
 
   public static void main(String[] args) {
-
+    ProcessFiles pf = new ProcessFiles();
+    try {
+      pf.WriteFile("test2");
+    } catch (Exception ex){
+      System.out.println("Could not write");
+    }
     // Write one line of code to create an ArrayList of products
     ArrayList <Product> products;
     // Write one line of code to call testCollection and assign the result to the ArrayList
